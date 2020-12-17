@@ -1,0 +1,33 @@
+﻿@model List<FilaMultiplicar>
+<h1>TablaMultiplicar</h1>
+<form method="post">
+    <label>Numero a multiplicar: </label>
+    <input class="input-group" type="number" name="numero" />
+    <br />
+
+    <button type="submit" class="btn btn-success">Multiplicar</button>
+</form>
+
+@if (Model != null)
+{
+    <table border="1">
+        <thead>
+        <tr>
+            <td>OPERACION</td>
+            <td>RESULTADO</td>
+        </tr>
+
+        </thead>
+        <tbody>
+
+        </tbody>
+            @foreach(FilaMultiplicar fila in Model)
+            {
+                <tr>
+                    <td>@fila.Operacion</td>
+                    <td>@fila.Resultado</td>
+                </tr>
+            }
+    </table>
+}
+

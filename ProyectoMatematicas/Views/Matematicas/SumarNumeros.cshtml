@@ -1,0 +1,20 @@
+﻿@model int
+
+
+<h1>SumarNumeros</h1>
+
+<form method="post">
+    <label>Numero 1:</label>
+    <input type="number" name="num1" />
+    <br/>
+
+    <label>Numero 2:</label>
+    <input type="number" name="num2" />
+    <br/>
+
+    <button type="submit" class="btn btn-success">Sumar</button>
+</form>
+@if (Model != 0)
+{
+    <h1 style="color: red"> @ViewBag.num1 + @ViewBag.num2 = @Model</h1>
+}
