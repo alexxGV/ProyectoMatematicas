@@ -1,0 +1,13 @@
+﻿@model List<int>
+<h1>Collatz</h1>
+<h1 style="color:red">@ViewData["NUMERO"]</h1>
+<div style="float: left">
+    <ul>
+        @foreach(int num in Model)
+        {
+            <li>
+                @Html.ActionLink(num.ToString(), "Collatz", "Matematicas", new { numero = num });
+            </li>
+        }
+    </ul>
+</div>

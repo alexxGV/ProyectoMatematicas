@@ -47,5 +47,18 @@ namespace ProyectoMatematicas.Controllers
         {
             return View();
         }
+
+        public IActionResult Collazt(int numero)
+        {
+            ViewData["NUMERO"] = numero;
+            List<int> aleatorios = new List<int>();
+            Random random = new Random();
+            for(int i = 0; i <10; i++)
+            {
+                int aleat = random.Next(1, 100);
+                aleatorios.Add(aleat);
+            }
+            return View(aleatorios);
+        }
     }
 }
